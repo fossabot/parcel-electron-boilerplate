@@ -8,7 +8,7 @@
     "start": "npm run build && electron .",
     "watch": "rimraf dist && run-p 'watch:**'",
     "watch:main": "parcel main.js --target node",
-    "watch:renderer": "parcel serve index.html --target electron",
+    "watch:renderer": "parcel watch index.html --target electron",
     "watch:serve": "serve -l 1234 dist",
     "watch:run": "wait-on http-get://localhost:1234/ dist/main.js && cross-env NODE_ENV=development electron .",
     "build": "rimraf dist && run-p 'build:**'",
