@@ -1,0 +1,44 @@
+{
+  "name": "parcel-electron-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An electron app boilerplate powered by parcel.",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "npm run build && electron .",
+    "watch": "rimraf dist && run-p 'watch:**'",
+    "watch:main": "parcel main.js --target node",
+    "watch:renderer": "parcel index.html",
+    "watch:serve": "wait-on http-get://localhost:1234/ dist/main.js && cross-env NODE_ENV=development electron .",
+    "build": "rimraf dist && run-p 'build:**'",
+    "build:main": "parcel build main.js --target node",
+    "build:renderer": "parcel build index.html --public-url './' --target electron",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "parcel",
+    "boilerplate"
+  ],
+  "author": "Elmer Yu",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "electron": "^4.2.6",
+    "electron-builder": "^21.0.15",
+    "electron-reload": "^1.4.0",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "wait-on": "^3.3.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ak64th/parcel-electron-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ak64th/parcel-electron-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ak64th/parcel-electron-boilerplate#readme"
+}
