@@ -1,0 +1,13 @@
+{
+  "productName": "parcel-electron-boilerplate",
+  "directories": {
+    "output": "release/"
+  },
+  "linux": {
+    "icon": "icon.png",
+    "category": "Utility",
+    "target": [
+      "AppImage"
+    ]
+  }
+}

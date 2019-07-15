@@ -7,13 +7,14 @@
   "scripts": {
     "start": "npm run build && electron .",
     "watch": "rimraf dist && run-p 'watch:**'",
-    "watch:main": "parcel main.js --target node",
-    "watch:renderer": "parcel watch index.html --target electron",
+    "watch:main": "parcel src/main.js --target node",
+    "watch:renderer": "parcel watch src/index.html --target electron",
     "watch:serve": "serve -l 1234 dist",
     "watch:run": "wait-on http-get://localhost:1234/ dist/main.js && cross-env NODE_ENV=development electron .",
     "build": "rimraf dist && run-p 'build:**'",
-    "build:main": "parcel build main.js --target node",
-    "build:renderer": "parcel build index.html --public-url './' --target electron",
+    "build:main": "parcel build src/main.js --target node",
+    "build:renderer": "parcel build src/index.html --public-url './' --target electron",
+    "package": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
