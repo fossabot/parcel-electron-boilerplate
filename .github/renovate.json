@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [{
+    "packageNames": ["electron"],
+    "allowedVersions": "<5.0"
+  }]
+}
